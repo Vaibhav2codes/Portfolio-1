@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -11,7 +12,7 @@ export const Contact = () => {
     email: '',
     phone: '',
     message: ''
-  }
+  };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
@@ -23,27 +24,42 @@ export const Contact = () => {
         ...formDetails,
         [category]: value
       })
+
+      
   }
 
-  const handleSubmit = async (e) => {
+   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
+    emailjs
+      .send(
+        "service_msdgrzg",
+        "template_6vwfrbr",
+        formDetails,
+        "wEpOxtCpa0Ji8m4l1"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setStatus({
+            success: true,
+            message: "Message sent successfully",
+          });
+          setFormDetails(formInitialDetails);
+          setButtonText("Send");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setStatus({
+            success: false,
+            message: "Something went wrong, please try again later.",
+          });
+          setButtonText("Send");
+        }
+      );
   };
+
+
 
   return (
     <section className="contact" id="connect">
