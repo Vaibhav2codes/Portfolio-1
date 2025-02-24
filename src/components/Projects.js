@@ -22,20 +22,20 @@ export const Projects = () => {
       // Link: projLink1,
     },
     {
-      title: "simon game",
-      description: "- Build a web game based on simon that asks for user input and remember the colour sequence of user and also randomly generted by computer.",
+      title: "Food Ordering Website",
+      description: "- Web application using the MERN stack (MongoDB, Express.js, React, and Node.js), focusing on creating an efficient and powerful food-ordering website.",
       imgUrl: projImg2,
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
     {
-      title: "spotify working clone",
+      title: "Spotify working clone",
       description: "- Using HTML,CSS,JavaScript build a working website clone of spotify that can play,next,back,pause,increase or decrease volume of music",
       imgUrl: projImg3,
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
     {
-      title: "TIC TAC TOE",
-      description: "- A Fully functioned TIC-TAC-TOE game",
+      title: "Social Media App",
+      description: "- Developed a comprehensive MERN stack web application, demonstrating proficiency in data pipelines, real-time updates,and problem-solving.",
       imgUrl: projImg4,
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
@@ -46,8 +46,8 @@ export const Projects = () => {
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
     {
-      title: "ScoreCard Reactapp",
-      description: "- Build a Reactapp of a scorecard of badminton matches and attached with each scorecard analysis video of that match.",
+      title: "Medical Insurance Cost Prediction",
+      description: "- Developed an innovative Flask-based web application empowered by Python's Artificial Intelligence capabilities, enabling accurate predictions of an individual's medical insurance costs with precision and efficiency.Implemented robust data pipelines and ETL processes to gather and preprocess diverse data sources.",
       imgUrl: projImg6,
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
@@ -66,17 +66,6 @@ export const Projects = () => {
                   
                 </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav> */}
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
@@ -91,12 +80,6 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

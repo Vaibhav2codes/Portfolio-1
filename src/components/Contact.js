@@ -31,12 +31,19 @@ export const Contact = () => {
    const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+  
+    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.phone || !formDetails.message) {
+      setStatus({ success: false, message: "All fields are required!" });
+      setButtonText("Send");
+      return; 
+    }
+  
     emailjs
       .send(
-        "service_msdgrzg",
-        "template_6vwfrbr",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
         formDetails,
-        "wEpOxtCpa0Ji8m4l1"
+        process.env.REACT_APP_EMAILJS_EXTRA_KEY
       )
       .then(
         (response) => {
