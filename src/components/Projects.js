@@ -47,7 +47,7 @@ export const Projects = () => {
     },
     {
       title: "Medical Insurance Cost Prediction",
-      description: "- Developed an innovative Flask-based web application empowered by Python's Artificial Intelligence capabilities, enabling accurate predictions of an individual's medical insurance costs with precision and efficiency.Implemented robust data pipelines and ETL processes to gather and preprocess diverse data sources.",
+      description: "- Developed an innovative Flask-based web application empowered by Python's Artificial Intelligence capabilities, enabling accurate predictions of an individual's medical insurance costs with precision and efficiency.",
       imgUrl: projImg6,
       // Link:"github.com/Vaibhav2codes/TIC_TAC_TOE",
     },
