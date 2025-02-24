@@ -5,6 +5,9 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
+import navIcon5 from '../assets/img/nav-icon5.svg';
+import navIcon6 from '../assets/img/nav-icon6.svg';
+import navIcon7 from '../assets/img/nav-icon7.svg';
 import resume from '../assets/img/Vaibhav-resume.pdf'
 import { HashLink } from 'react-router-hash-link';
 import {
@@ -54,6 +57,9 @@ export const NavBar = () => {
               <a href="https://www.facebook.com/vaibhav.singh211/"><img src={navIcon2} alt="Icon" /></a>
               <a href="https://www.instagram.com/vaibhav_02.11/"><img src={navIcon3} alt="Icon" /></a>
               <a href="https://github.com/Vaibhav2codes"><img src={navIcon4} alt="Icon" /></a>
+              <a href="https://www.codechef.com/users/vaibhavcodes02"><img src={navIcon5} alt="Icon" /></a>
+              <a href="https://leetcode.com/vaibhavcodes02/"><img src={navIcon6} alt="Icon" /></a>
+              <a href="https://codeforces.com/profile/vaibhav02codes"><img src={navIcon7} alt="Icon" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
